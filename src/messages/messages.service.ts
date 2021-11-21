@@ -1,12 +1,9 @@
+import { Injectable } from "@nestjs/common";
 import { MessageRepository } from "./message.repository";
 
+@Injectable()
 export class MessagesService{
-    messagesRepo : MessageRepository;
-    
-    constructor(){
-        //* Service is creating its own dependencies , it needs to have a repo inside the service
-        //* we dont do below often
-        this.messagesRepo = new MessageRepository()
+    constructor(public messagesRepo : MessageRepository){
     }
     findOne(id : string) : Object{
         return this.messagesRepo.findOne(id);

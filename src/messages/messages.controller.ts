@@ -2,15 +2,11 @@ import { Controller, Get, Post, Body, Param, NotFoundException } from '@nestjs/c
 import { CreateMessageDto } from './dtos/create-message.dto';
 import { MessagesService } from './messages.service';
 
-
+//* no se pone injectable porque este esta consumiento ya las clases internas sus dependeincas internas
 
 @Controller('messages')
 export class MessagesController {
-    messagesService : MessagesService;
-    
-    constructor(){
-        //Dont do this in reall apps yopu use @Injectable
-        this.messagesService = new MessagesService()
+    constructor(public messagesService : MessagesService){
     }
 
     @Get()
