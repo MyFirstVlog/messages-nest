@@ -1,0 +1,36 @@
+- Es importante mencioanr que para hacer pipe de validacion se usara dtos y para tener los modulos de class validators se debe instalar:
+
+* npm i class-validator class-transformer
+
+
+- Si hay problema con el class-transformer entonces con los validations:
+
+* npm install class-transformer@0.4.0
+
+- dtos
+
+* lista propiedades de como una solictud debe lucir 
+
+- class-Transformer
+
+* Toma un texto plano y lo vuelve una instancia de una clase y asi poder verficar las props y que se cumplan las condiciones
+
+- Class-Validator 
+
+* Valida los datos en especifico
+
+- Use injections decorator 
+
+/* 
+messagesService : MessagesService;
+    
+constructor(){
+    //Dont do this in reall apps yopu use @Injectable
+    this.messagesService = new MessagesService()
+}
+
+*/
+
+- Dependency Injections
+
+*  miarar drive
